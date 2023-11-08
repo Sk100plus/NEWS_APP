@@ -23,16 +23,16 @@ export default class App extends Component {
    
     <Routes>
     <Route  exacet path="/NEWS_APP" element={<News key="generl" pageSize={3} country="in"  category="general"/>}></Route> 
-    <Route exact path="/general" element={<News key="general" pageSize={3} country="in"  category="general" />}></Route> 
-    <Route exact path="/health"element={<News key="health"pageSize={3} country="in"  category="health" />}></Route> 
-    <Route exact path="/business"element={<News key="business"pageSize={3} country="in"  category="business" />}></Route> 
-    <Route  exact path="/technology"element={<News key="technology"pageSize={3} country="in"  category="technology" />}></Route> 
-    <Route exact path="/science" element={<News key="science"pageSize={3} country="in"  category="science" />}></Route> 
+    <Route exact path="/NEWS_APP/general" element={<News key="general" pageSize={3} country="in"  category="general" />}></Route> 
+    <Route exact path="/NEWS_APP/health"element={<News key="health"pageSize={3} country="in"  category="health" />}></Route> 
+    <Route exact path="/NEWS_APP/business"element={<News key="/business"pageSize={3} country="in"  category="business" />}></Route> 
+    <Route  exact path="/NEWS_APP/technology"element={<News key="technology"pageSize={3} country="in"  category="technology" />}></Route> 
+    <Route exact path="/NEWS_APP/science" element={<News key="science"pageSize={3} country="in"  category="science" />}></Route> 
     </Routes>
     {/*  */}
 
     </BrowserRouter>
     </div>
-    )
+    );
   }
 }

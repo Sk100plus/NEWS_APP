@@ -4,7 +4,7 @@ import React, { Component } from 'react'
 import NavBar from './components/navbar';
 import News from './components/News';
 import {
-  BrowserRouter as Router,
+  BrowserRouter ,
   Routes,
   Route,
   // Link
@@ -15,15 +15,14 @@ export default class App extends Component {
   render() {
     return (
       <div >
-      <Router>
+      <BrowserRouter>
     
      
     <NavBar/>
    
    
     <Routes>
-    <Route path="/NEWS_APP" element={<News pageSize={3} country="in"  category="general" />}></Route> 
-
+    <Route  path="/NEWS_APP" element={<News pageSize={3} country="in"  category="general" />}></Route> 
     <Route path="/general" element={<News key="general" pageSize={3} country="in"  category="general" />}></Route> 
     <Route path="/health"element={<News key="health"pageSize={3} country="in"  category="health" />}></Route> 
     <Route path="/business"element={<News key="business"pageSize={3} country="in"  category="business" />}></Route> 
@@ -32,8 +31,9 @@ export default class App extends Component {
     </Routes>
     {/*  */}
 
-    </Router>
+    </BrowserRouter>
     </div>
     )
   }
 }
+

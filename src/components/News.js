@@ -2,8 +2,6 @@ import React, { Component } from 'react'
 import NewsItem from './NewsItem'
 import Spinner from './spinner';
 import PropTypes from 'prop-types'
-// import InfiniteScroll from "react-infinite-scroll-component";
-
 export class News extends Component {
 
 // Setting of default proptypes
@@ -93,20 +91,7 @@ static propsTypes={
 
   });
   }
-  // fetchMoreData = async()=>{
-  //   let url=`https://newsapi.org/v2/top-headlines?country=${this.props.country}&category=${this.props.category}&apiKey=a6f2b1cabfa548999b4e6fb901647656&page=${this.state.page++}&pageSize=${this.props.pageSize}`;
-  //   this.setState({    loading:true,});
-  //   let data=await fetch(url);
-  // let parseData=await data.json()
-  // console.log(parseData);
-  // this.setState({
-  //   articles:parseData.articles,
-  //   totalResults:parseData.totalResults,
-  // loading:false,
 
-  // });
-   
-  // };
   async componentDidMount(){
   this.updateNews();
   }
@@ -129,13 +114,7 @@ static propsTypes={
         <h1 className="text-center" style={{margin:"30px 0px"}}>Breaking News Network of INDIA !</h1>
         <h3 className="text-center" style={{margin:"30px 0px"}}>Top  {this.capitlizeText(this.props.category)}-Headlines</h3>
        { this.state.loading &&<Spinner/>}
-       {/* <InfiniteScroll
-          dataLength={this.state.articles.length}
-          next={this.fetchMoreData}
-          hasMore={this.state.articles.length!==this.state.totalResults}
-          loader={<Spinner/>}
-        > */}
-          
+    
 
         <div className="row">
         { !this.state.loading&&this.state.articles.map((ele)=>{
@@ -146,7 +125,6 @@ static propsTypes={
         })}
         </div>
 
-        {/* </InfiniteScroll> */}
         <div className="d-flex justify-content-between">
         <button disabled={this.state.page<=1} type="button" className="btn btn-dark" onClick={this.handlePreviousClick}>&larr;Previous</button>
         <button  disabled={this.state.page+1>Math.ceil(this.state.totalResults/this.props.pageSize)}type="button" className="btn btn-dark" onClick={this.handleNextClick}>Next&rarr;</button>

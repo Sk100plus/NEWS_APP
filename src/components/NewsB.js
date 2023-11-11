@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import NewsItem from './NewsItem'
 import Spinner from './spinner';
 import PropTypes from 'prop-types'
-export class News extends Component {
+export class NewsB extends Component {
 
 // Setting of default proptypes
 static defaultProps={
@@ -18,6 +18,7 @@ static propsTypes={
   }
   constructor(props){
     super(props);
+    console.log("Hello");
     this.state={
       articles:[],
       loading:false,
@@ -82,6 +83,7 @@ static propsTypes={
     this.setState({    loading:true,});
     let data=await fetch(url);
   let parseData=await data.json()
+  console.log(parseData);
   this.setState({
     articles:parseData.articles,
     totalResults:parseData.totalResults,
@@ -98,9 +100,8 @@ static propsTypes={
     this.updateNews();
     }
      handleNextClick=async()=>{
-      this.updateNews();
         this.setState({page:this.state.page+1});
-     
+        this.updateNews();
     }
 
   // it will run after render
@@ -133,7 +134,7 @@ static propsTypes={
   }
 }
 
-export default News
+export default NewsB
 
 // In case of inline CSS we made a javascript object and 
 // wirte inside double curly braces ;

@@ -22,6 +22,7 @@ export class NavBar extends Component {
       {/* // businessentertainmentgeneralhealthsciencesportstechnology */}
       <li className="nav-item">
         <a className="nav-link" href="/NEWS_APP/business">Business</a>
+<<<<<<< HEAD
       </li>     
       <li className="nav-item">
         <a className="nav-link" href="/NEWS_APP/health">Health</a>
@@ -30,6 +31,15 @@ export class NavBar extends Component {
         <a className="nav-link" href="/NEWS_APP/science">Science</a>
       </li>     
       <li className="nav-item">
+=======
+      </li>     <li className="nav-item">
+        <a className="nav-link" href="/NEWS_APP/health">Health</a>
+      </li>     <li className="nav-item">
+        <a className="nav-link" href="/NEWS_APP/general">General</a>
+      </li>     <li className="nav-item">
+        <a className="nav-link" href="/NEWS_APP/science">Science</a>
+      </li>     <li className="nav-item">
+>>>>>>> 76501be989d8937abd350f6afc1d8b7f98020e9a
         <a className="nav-link" href="/NEWS_APP/technology">Technology</a>
       </li>
     </ul>

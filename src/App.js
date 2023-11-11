@@ -35,7 +35,9 @@ export default class App extends Component {
     {/*  */}
 
     </BrowserRouter>
+
     </div>
     );
   }
 }
+

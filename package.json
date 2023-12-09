@@ -1,11 +1,6 @@
 {
-<<<<<<< HEAD
-
-   "homepage": "https://`Sk100plus.github.io/NEWS_APP",
-=======
->>>>>>> 76501be989d8937abd350f6afc1d8b7f98020e9a
   "name": "newsapps",
- "homepage": "https://Sk100plus.github.io/NEWS_APP",
+  "homepage": "https://Sk100plus.github.io/NEWS_APP",
   "version": "0.1.0",
   "private": false,
   "dependencies": {
@@ -17,13 +12,13 @@
     "react-infinite-scroll-component": "^6.1.0",
     "react-router-dom": "^6.18.0",
     "react-scripts": "5.0.1",
+    "react-top-loading-bar": "^2.3.1",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    
     "start": "react-scripts start",
-      "predeploy":"npm run build",
-"deploy":"gh-pages -d build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"

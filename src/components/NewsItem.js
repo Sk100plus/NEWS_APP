@@ -12,7 +12,7 @@ export class NewsItem extends Component {
       <div className="my-3 ">
         
         <div  className=" card postion-relative" style={{ width: "18rem" }}>
-        <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-dark text-light" style={{left:'-10%',top:'-2%',zIndex:'1'}}>
+        <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger text-light" style={{right:"0"}}>
 {sources}  </span>
           <img src={imageurl} className="card-img-top" alt="..." />
           <div className="card-body ">

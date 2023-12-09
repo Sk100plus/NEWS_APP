@@ -78,7 +78,8 @@ static propsTypes={
     
   //  WE USE STATE TO CHANGE ANYTHING AGAIN AND AGAIN WITHOUT LOADING OF PAGE 
  
-  async updateNews(pageNo){
+  async updateNews(pageNo){    
+    this.props.setProgress(0);
     let url=`https://newsapi.org/v2/top-headlines?country=${this.props.country}&category=${this.props.category}&apiKey=a6f2b1cabfa548999b4e6fb901647656&page=${this.state.page}&pageSize=${this.props.pageSize}`;
     this.setState({    loading:true,});
     let data=await fetch(url);
@@ -90,6 +91,8 @@ static propsTypes={
   loading:false,
 
   });
+  this.props.setProgress(100);
+
   }
 
   async componentDidMount(){

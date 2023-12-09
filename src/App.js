@@ -24,6 +24,7 @@ apiKey=process.env.REACT_APP_NEWS_API;
     this.setState({progress:progress})
   }
   render() {
+    // fnfj
     return (
       <div >
       <BrowserRouter  >
@@ -32,7 +33,7 @@ apiKey=process.env.REACT_APP_NEWS_API;
         progress={100}
         height={4}
       /> 
-      {/* this is me */}
+      
     <NavBar/>
    
     {/* <News key="general" pageSize={3} country="in"  category="general"/> */}

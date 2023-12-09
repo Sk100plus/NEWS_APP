@@ -32,16 +32,17 @@ apiKey=process.env.REACT_APP_NEWS_API;
         progress={100}
         height={4}
       /> 
+      {/* this is me */}
     <NavBar/>
    
     {/* <News key="general" pageSize={3} country="in"  category="general"/> */}
     {/* <News1 exact path="/NEWS_APP/health"element={<News1 key="health"pageSize={3} country="in"  category="health" />}/> */}
  <Routes>
-    <Route  exacet path="/NEWS_APP" element={<News setProgress={this.setProgress} apiKey={this.apiKey} key="general" pageSize={20} country="in"  category="general"/>}></Route> 
-    <Route exact path="/NEWS_APP/health" element={<NewsH setProgress={this.setProgress} apiKey={this.apiKey} key="health" pageSize={20} country="in"  category="health" />}></Route> 
-    <Route exact path="/NEWS_APP/science"element={<NewsSci setProgress={this.setProgress} apiKey={this.apiKey} key="/science"pageSize={20} country="in"  category="science" />}></Route> 
-    <Route  exact path="/NEWS_APP/technology"element={<NewsTech setProgress={this.setProgress} apiKey={this.apiKey} key="technology"pageSize={20} country="in"  category="technology" />}></Route> 
-    <Route exact path="/NEWS_APP/business" element={<NewsB setProgress={this.setProgress} apiKey={this.apiKey} key="business"pageSize={20} country="in"  category="business" />}></Route> 
+    <Route  exacet path="/NEWS_APP" element={<News setProgress={this.setProgress} apiKey={this.apiKey} key="general" pageSize={21} country="in"  category="general"/>}></Route> 
+    <Route exact path="/NEWS_APP/health" element={<NewsH setProgress={this.setProgress} apiKey={this.apiKey} key="health" pageSize={21} country="in"  category="health" />}></Route> 
+    <Route exact path="/NEWS_APP/science"element={<NewsSci setProgress={this.setProgress} apiKey={this.apiKey} key="/science"pageSize={21} country="in"  category="science" />}></Route> 
+    <Route  exact path="/NEWS_APP/technology"element={<NewsTech setProgress={this.setProgress} apiKey={this.apiKey} key="technology"pageSize={21} country="in"  category="technology" />}></Route> 
+    <Route exact path="/NEWS_APP/business" element={<NewsB setProgress={this.setProgress} apiKey={this.apiKey} key="business"pageSize={21} country="in"  category="business" />}></Route> 
     </Routes>
     {/*  */}
    

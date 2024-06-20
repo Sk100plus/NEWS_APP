@@ -5,12 +5,14 @@ import PropTypes from 'prop-types'
 export class News extends Component {
 
 // Setting of default proptypes
-static defaultProps={
-country:'in',
-pageSize:3,
-category:'general'
-}
+// static defaultProps={
+// country:'in',
+// pageSize:20,
+// category:'general'
+// }
 // businessentertainmentgeneralhealthsciencesportstechnology
+
+
 static propsTypes={
  country:PropTypes.string,
  pageSize:PropTypes.number,
@@ -80,7 +82,7 @@ static propsTypes={
   async updateNews(pageNo){
     this.props.setProgress(0);
     // a6f2b1cabfa548999b4e6fb901647656
-    let url=`https://newsapi.org/v2/top-headlines?country=${this.props.country}&category=${this.props.category}&apiKey=${this.props.apiKey}&page=${this.state.page}&pageSize=${this.props.pageSize}`;
+    let url=`https://newsapi.org/v2/top-headlines?country=us&apiKey=a6f2b1cabfa548999b4e6fb901647656`;
     this.setState({    loading:true,});
     let data=await fetch(url);
   let parseData=await data.json();
@@ -113,7 +115,7 @@ static propsTypes={
   render() {
     return (
       <div className="container my-3">
-        <h1 className="text-center" style={{margin:"30px 0px"}}>Breaking News Network of INDIA !</h1>
+        <h2 className="text-center" style={{margin:"30px 0px",marginTop:"90px"}}>Breaking News Network of The World !</h2>
         <h3 className="text-center" style={{margin:"30px 0px"}}>Top  {this.capitlizeText(this.props.category)}-Headlines</h3>
        { this.state.loading &&<Spinner/>}
     
@@ -140,3 +142,5 @@ export default News
 
 // In case of inline CSS we made a javascript object and 
 // wirte inside double curly braces ;
+
+// https://newsapi.org/v2/top-headlines?country=us&apiKey=a6f2b1cabfa548999b4e6fb901647656

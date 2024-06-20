@@ -1,13 +1,12 @@
-import React, { Component } from 'react'
+import React, {} from 'react'
 
-export class NewsItem extends Component {
+const NewsItem=(props)=> {
 
   // If you want to write constructor then u should call super class if its have an object!
 
 
 
-  render() {
-    let { title, description, newsurl, imageurl, author, date, sources } = this.props;
+    let { title, description, newsurl, imageurl, author, date, sources } = props;
     return (
       <div className="my-3 ">
         
@@ -22,13 +21,13 @@ export class NewsItem extends Component {
   
             <p className="card-text">{description}...</p>
             <p className='card-text'><small className='text-muted'>By : {author} on {new Date(date).toGMTString()}</small></p>
-            <a rel="noreferrer" href={newsurl} target="_blank" className="btn btn-sm btn-dark ">Go somewhere
+            <a rel="noreferrer" href={newsurl} target="_blank" className="btn btn-sm btn-dark ">Go in Details
           </a>
           </div>
         </div>
       </div>
     )
   }
-}
+
 
 export default NewsItem

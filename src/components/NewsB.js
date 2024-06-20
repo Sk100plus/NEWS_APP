@@ -5,11 +5,11 @@ import PropTypes from 'prop-types'
 export class NewsB extends Component {
 
 // Setting of default proptypes
-static defaultProps={
-country:'in',
-pageSize:3,
-category:'general'
-}
+// static defaultProps={
+// country:'in',
+// pageSize:20,
+// category:'general'
+// }
 // businessentertainmentgeneralhealthsciencesportstechnology
 static propsTypes={
  country:PropTypes.string,
@@ -114,7 +114,7 @@ static propsTypes={
   render() {
     return (
       <div className="container my-3">
-        <h1 className="text-center" style={{margin:"30px 0px"}}>Breaking News Network of INDIA !</h1>
+        <h2 className="text-center" style={{margin:"30px 0px",marginTop:"90px"}}>Breaking News Network of INDIA !</h2>
         <h3 className="text-center" style={{margin:"30px 0px"}}>Top  {this.capitlizeText(this.props.category)}-Headlines</h3>
        { this.state.loading &&<Spinner/>}
     
